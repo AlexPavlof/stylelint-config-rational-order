@@ -2,7 +2,7 @@ import stylelint from 'stylelint';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-import { ruleName } from '../plugin';
+import { ruleName } from '../plugin/index.js';
 
 // eslint-disable-next-line no-underscore-dangle
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
