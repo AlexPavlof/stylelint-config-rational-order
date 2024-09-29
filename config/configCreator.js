@@ -1,10 +1,10 @@
-import special from '../groups/special';
-import positioning from '../groups/positioning';
-import boxModel from '../groups/boxModel';
-import typography from '../groups/typography';
-import visual from '../groups/visual';
-import animation from '../groups/animation';
-import misc from '../groups/misc';
+import special from '../groups/special.js';
+import positioning from '../groups/positioning.js';
+import boxModel from '../groups/boxModel.js';
+import typography from '../groups/typography.js';
+import visual from '../groups/visual.js';
+import animation from '../groups/animation.js';
+import misc from '../groups/misc.js';
 
 const configCreator = ({
   'border-in-box-model': borderInBoxModel = false,
