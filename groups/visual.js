@@ -1,4 +1,4 @@
-import borderProps from './border';
+import borderProps from './border.js';
 
 const partOne = [
   'list-style',

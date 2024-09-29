@@ -1,4 +1,4 @@
-# @sazuru/stylelint-config-rational-order
+# @alexpavlov/stylelint-config-rational-order
 
 [![NPM version][version-img]][npm-url]
 [![NPM downloads][downloads-img]][npm-url]
@@ -57,13 +57,13 @@ Stylelint config that sorts related property declarations by grouping together f
 1.  Add `stylelint`, `stylelint-order` and this package to your project:
 
 ```bash
-npm install --save-dev stylelint stylelint-order @sazuru/stylelint-config-rational-order
+npm install --save-dev stylelint stylelint-order @alexpavlov/stylelint-config-rational-order
 ```
 
 ##### or, if you prefer yarn over npm:
 
 ```bash
-yarn add --dev stylelint stylelint-order @sazuru/stylelint-config-rational-order
+yarn add --dev stylelint stylelint-order @alexpavlov/stylelint-config-rational-order
 ```
 
 2.  Add this package to the end of your extends array inside Stylelint
@@ -73,7 +73,7 @@ yarn add --dev stylelint stylelint-order @sazuru/stylelint-config-rational-order
 {
   "extends": [
     ...(rest of your stylelint config),
-    "@sazuru/stylelint-config-rational-order"
+    "@alexpavlov/stylelint-config-rational-order"
   ]
 }
 ```
@@ -83,7 +83,7 @@ This shareable config contains the following:
 {
   "plugins": [
     "stylelint-order",
-    "@sazuru/stylelint-config-rational-order/plugin"
+    "@alexpavlov/stylelint-config-rational-order/plugin"
   ],
   "rules": {
     "order/properties-order": [],
@@ -95,7 +95,7 @@ This shareable config contains the following:
 }
 ```
 
-Since it adds `stylelint-order` and `@sazuru/stylelint-config-rational-order` to plugins and also adds required rules, you don't have to do this yourself when extending this config.
+Since it adds `stylelint-order` and `@alexpavlov/stylelint-config-rational-order` to plugins and also adds required rules, you don't have to do this yourself when extending this config.
 
 
 ## Optional options / rules
@@ -129,10 +129,10 @@ If `true` adds an empty line between groups. The default value is `false`.
 * [Code Guide by HTML Academy](https://github.com/htmlacademy/codeguide)
 
 
-[npm-url]: https://www.npmjs.com/package/@sazuru/stylelint-config-rational-order
-[downloads-img]: https://img.shields.io/npm/dt/@sazuru/stylelint-config-rational-order?style=flat-square
-[version-img]: https://img.shields.io/npm/v/@sazuru/stylelint-config-rational-order?style=flat-square
-[ci-url]: https://travis-ci.org/@sazuru/stylelint-config-rational-order
-[ci-img]: https://img.shields.io/travis/@sazuru/stylelint-config-rational-order.svg?style=flat-square
-[l-url]: https://www.npmjs.com/package/@sazuru/stylelint-config-rational-order
-[l-img]: https://img.shields.io/npm/l/@sazuru/stylelint-config-rational-order.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/@alexpavlov/stylelint-config-rational-order
+[downloads-img]: https://img.shields.io/npm/dt/@alexpavlov/stylelint-config-rational-order?style=flat-square
+[version-img]: https://img.shields.io/npm/v/@alexpavlov/stylelint-config-rational-order?style=flat-square
+[ci-url]: https://travis-ci.org/@alexpavlov/stylelint-config-rational-order
+[ci-img]: https://img.shields.io/travis/@alexpavlov/stylelint-config-rational-order.svg?style=flat-square
+[l-url]: https://www.npmjs.com/package/@alexpavlov/stylelint-config-rational-order
+[l-img]: https://img.shields.io/npm/l/@alexpavlov/stylelint-config-rational-order.svg?style=flat-square

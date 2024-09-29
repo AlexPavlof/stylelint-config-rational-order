@@ -5,7 +5,7 @@
 ==================================================================
 */
 
-import config from './config/extendedStylelintOrderConfig';
+import config from './config/extendedStylelintOrderConfig.js';
 
 const borderInBoxConfig = config({ 'border-in-box-model': true });
 
