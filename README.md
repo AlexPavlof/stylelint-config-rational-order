@@ -132,7 +132,7 @@ If `true` adds an empty line between groups. The default value is `false`.
 [npm-url]: https://www.npmjs.com/package/@alexpavlov/stylelint-config-rational-order
 [downloads-img]: https://img.shields.io/npm/dt/@alexpavlov/stylelint-config-rational-order?style=flat-square
 [version-img]: https://img.shields.io/npm/v/@alexpavlov/stylelint-config-rational-order?style=flat-square
-[ci-url]: https://travis-ci.org/@alexpavlov/stylelint-config-rational-order
-[ci-img]: https://img.shields.io/travis/@alexpavlov/stylelint-config-rational-order.svg?style=flat-square
+[ci-url]: https://github.com/AlexPavlof/stylelint-config-rational-order/actions/workflows/npm-publish.yml
+[ci-img]: https://img.shields.io/github/actions/workflow/status/AlexPavlof/stylelint-config-rational-order/npm-publish.yml?style=flat-square
 [l-url]: https://www.npmjs.com/package/@alexpavlov/stylelint-config-rational-order
 [l-img]: https://img.shields.io/npm/l/@alexpavlov/stylelint-config-rational-order.svg?style=flat-square
