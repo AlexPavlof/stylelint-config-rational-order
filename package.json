@@ -68,7 +68,7 @@
     "eslint-plugin-jest": "^29.16.1",
     "globals": "^17.11.0",
     "jest": "^30",
-    "prettier": "^3.2.5",
+    "prettier": "^3.9.6",
     "stylelint": "^17",
     "stylelint-order": "^8"
   },
