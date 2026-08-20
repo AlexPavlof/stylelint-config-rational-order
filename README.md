@@ -52,6 +52,17 @@ Stylelint config that sorts related property declarations by grouping together f
 }
 ```
 
+## Requirements
+
+|                   | Version     |
+| ----------------- | ----------- |
+| Node.js           | `>=20.19.0` |
+| `stylelint`       | `^17`       |
+| `stylelint-order` | `^8`        |
+
+`stylelint` and `stylelint-order` are peer dependencies — install them yourself,
+as shown below.
+
 ## Usage
 
 1.  Add `stylelint`, `stylelint-order` and this package to your project:
@@ -78,8 +89,9 @@ yarn add --dev stylelint stylelint-order @alexpavlov/stylelint-config-rational-o
 }
 ```
 
-This shareable config contains the following:
-```javascript
+This shareable config is equivalent to the following:
+
+```json
 {
   "plugins": [
     "stylelint-order",
@@ -87,16 +99,22 @@ This shareable config contains the following:
   ],
   "rules": {
     "order/properties-order": [],
-    "plugin/rational-order": [true, {
-      "border-in-box-model": false,
-      "empty-line-between-groups": false,
-    }]
+    "plugin/rational-order": [
+      true,
+      {
+        "border-in-box-model": false,
+        "empty-line-between-groups": false
+      }
+    ]
   }
 }
 ```
 
-Since it adds `stylelint-order` and `@alexpavlov/stylelint-config-rational-order` to plugins and also adds required rules, you don't have to do this yourself when extending this config.
+`"order/properties-order": []` is required, not decorative: `plugin/rational-order`
+reports its warnings under that rule name, so the entry is what gives them a
+severity. Keep it if you configure the plugin by hand.
 
+Since it adds `stylelint-order` and `@alexpavlov/stylelint-config-rational-order` to plugins and also adds required rules, you don't have to do this yourself when extending this config.
 
 ## Optional options / rules
 
@@ -107,7 +125,6 @@ Defines to which group the **border** property belongs to.
 If `true` **border** property belongs to the **box model section**.
 The default value is `false` (**border** property belongs to the **visual section**).
 
-
 #### empty-line-between-groups
 
 If `true` adds an empty line between groups. The default value is `false`.
@@ -117,22 +134,22 @@ If `true` adds an empty line between groups. The default value is `false`.
 <details>
   <summary>Why should I use the rational order and group and sort CSS properties by type instead of alphabetical order?</summary>
 
-  The pros and cons of both ways in detail:
+The pros and cons of both ways in detail:
 
-* [Happy Potter and the Order of CSS](https://dev.to/thekashey/happy-potter-and-the-order-of-css-5ec)
-* [“Outside In” — Ordering CSS Properties by Importance](https://webdesign.tutsplus.com/articles/outside-in-ordering-css-properties-by-importance--cms-21685)
+- [Happy Potter and the Order of CSS](https://dev.to/thekashey/happy-potter-and-the-order-of-css-5ec)
+- [“Outside In” — Ordering CSS Properties by Importance](https://webdesign.tutsplus.com/articles/outside-in-ordering-css-properties-by-importance--cms-21685)
+
 </details>
 
 ## Credits
 
-* [Code Guide by @mdo](http://codeguide.co/)
-* [Code Guide by HTML Academy](https://github.com/htmlacademy/codeguide)
-
+- [Code Guide by @mdo](http://codeguide.co/)
+- [Code Guide by HTML Academy](https://github.com/htmlacademy/codeguide)
 
 [npm-url]: https://www.npmjs.com/package/@alexpavlov/stylelint-config-rational-order
 [downloads-img]: https://img.shields.io/npm/dt/@alexpavlov/stylelint-config-rational-order?style=flat-square
 [version-img]: https://img.shields.io/npm/v/@alexpavlov/stylelint-config-rational-order?style=flat-square
-[ci-url]: https://github.com/AlexPavlof/stylelint-config-rational-order/actions/workflows/npm-publish.yml
-[ci-img]: https://img.shields.io/github/actions/workflow/status/AlexPavlof/stylelint-config-rational-order/npm-publish.yml?style=flat-square
+[ci-url]: https://github.com/AlexPavlof/stylelint-config-rational-order/actions/workflows/ci.yml
+[ci-img]: https://img.shields.io/github/actions/workflow/status/AlexPavlof/stylelint-config-rational-order/ci.yml?style=flat-square
 [l-url]: https://www.npmjs.com/package/@alexpavlov/stylelint-config-rational-order
 [l-img]: https://img.shields.io/npm/l/@alexpavlov/stylelint-config-rational-order.svg?style=flat-square

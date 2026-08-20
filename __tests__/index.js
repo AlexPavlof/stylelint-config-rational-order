@@ -4,13 +4,12 @@ import { fileURLToPath } from 'url';
 
 import { ruleName } from '../plugin/index.js';
 
-// eslint-disable-next-line no-underscore-dangle
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const getExtendedConfig = code => ({
   code,
   config: {
-    extends: ['../index'],
+    extends: ['../index.js'],
   },
   configBasedir: __dirname,
 });
@@ -18,7 +17,7 @@ const getExtendedConfig = code => ({
 const getPluginOptions = (code, rules) => ({
   code,
   config: {
-    plugins: ['../plugin'],
+    plugins: ['../plugin/index.js'],
     rules,
   },
   configBasedir: __dirname,
@@ -246,6 +245,29 @@ describe('stylelint-config-rational-order/plugin', () => {
       return stylelint.lint(getPluginOptions(wrong, rules)).then(output => {
         expect(output.errored).toBeTruthy();
       });
+    });
+  });
+});
+
+describe('autofix', () => {
+  const unordered = 'a { color: red; position: absolute; width: 10px; }';
+  const ordered = 'a { position: absolute; width: 10px; color: red; }';
+
+  it('reorders declarations through the shareable config', () =>
+    stylelint.lint({ ...getExtendedConfig(unordered), fix: true }).then(output => {
+      expect(output.code).toBe(ordered);
+      expect(output.results[0].autofixed).toBeTruthy();
+    }));
+
+  // The plugin reports under `order/properties-order`, which is absent from
+  // `rules` here. stylelint dereferences that key while resolving fixes, so
+  // without the guard in plugin/index.js this throws instead of fixing.
+  it('reorders declarations with the plugin used on its own', () => {
+    const rules = {
+      [ruleName]: [true, { 'empty-line-between-groups': false }],
+    };
+    return stylelint.lint({ ...getPluginOptions(unordered, rules), fix: true }).then(output => {
+      expect(output.code).toBe(ordered);
     });
   });
 });
