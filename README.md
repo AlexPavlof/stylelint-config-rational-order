@@ -79,6 +79,7 @@ yarn add --dev stylelint stylelint-order @alexpavlov/stylelint-config-rational-o
 ```
 
 This shareable config contains the following:
+
 ```javascript
 {
   "plugins": [
@@ -97,7 +98,6 @@ This shareable config contains the following:
 
 Since it adds `stylelint-order` and `@alexpavlov/stylelint-config-rational-order` to plugins and also adds required rules, you don't have to do this yourself when extending this config.
 
-
 ## Optional options / rules
 
 #### border-in-box-model
@@ -106,7 +106,6 @@ Defines to which group the **border** property belongs to.
 
 If `true` **border** property belongs to the **box model section**.
 The default value is `false` (**border** property belongs to the **visual section**).
-
 
 #### empty-line-between-groups
 
@@ -117,17 +116,17 @@ If `true` adds an empty line between groups. The default value is `false`.
 <details>
   <summary>Why should I use the rational order and group and sort CSS properties by type instead of alphabetical order?</summary>
 
-  The pros and cons of both ways in detail:
+The pros and cons of both ways in detail:
 
-* [Happy Potter and the Order of CSS](https://dev.to/thekashey/happy-potter-and-the-order-of-css-5ec)
-* [“Outside In” — Ordering CSS Properties by Importance](https://webdesign.tutsplus.com/articles/outside-in-ordering-css-properties-by-importance--cms-21685)
+- [Happy Potter and the Order of CSS](https://dev.to/thekashey/happy-potter-and-the-order-of-css-5ec)
+- [“Outside In” — Ordering CSS Properties by Importance](https://webdesign.tutsplus.com/articles/outside-in-ordering-css-properties-by-importance--cms-21685)
+
 </details>
 
 ## Credits
 
-* [Code Guide by @mdo](http://codeguide.co/)
-* [Code Guide by HTML Academy](https://github.com/htmlacademy/codeguide)
-
+- [Code Guide by @mdo](http://codeguide.co/)
+- [Code Guide by HTML Academy](https://github.com/htmlacademy/codeguide)
 
 [npm-url]: https://www.npmjs.com/package/@alexpavlov/stylelint-config-rational-order
 [downloads-img]: https://img.shields.io/npm/dt/@alexpavlov/stylelint-config-rational-order?style=flat-square
